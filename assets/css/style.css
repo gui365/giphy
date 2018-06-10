@@ -1,0 +1,34 @@
+body {
+    margin: 1rem;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 10px;
+    padding: 0.5rem 2rem;;
+    color: white;
+}
+
+#images {
+    margin-top: 1rem;
+}
+
+p {
+    /* font-size: 0.5rem; */
+    margin-top: 0.2rem;
+}
+
+.image-div {
+    margin: 0.5rem;
+    border: 1px solid rgb(0, 123, 255);
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgb(221, 221, 221);
+}
+
+button {
+    font-size: 0.85rem !important;
+}
