@@ -1,6 +1,6 @@
 var giphy = {
   apiKey: "6TOJn9Z285U9hfH7TGvprMzuhQhzncPw",
-  topics: ["Monica Geller", "Ross Geller", "Phoebe Buffey", "Rachel Green", "Chandler Bing", "friends", "Janice friends"],
+  topics: ["Monica Geller", "Ross Geller", "Phoebe Buffey", "Joey Tribbiani", "Rachel Green", "Chandler Bing", "friends", "Janice friends"],
   // User's custom keyword
   keyword: "",
   numberImages: "10",
@@ -36,14 +36,26 @@ var giphy = {
     $("#images").empty();
     for (let i = 0; i < response.data.length; i++) {
       var imageDiv = $("<div>"); 
-      imageDiv.addClass("image-div");
+      imageDiv.addClass("image-div text-left");
+
       var image = $("<img>");
       image.attr({src: response.data[i].images.fixed_height_still.url, alt: response.data[i].title, "data-url-still": response.data[i].images.fixed_height_still.url, "data-url-move": response.data[i].images.fixed_height.url});
       image.on("click", giphy.switchImage);
       imageDiv.append(image);
+
       var description = $("<p>");
       description.text("Rating: " + (response.data[i].rating).toUpperCase());
       imageDiv.append(description);
+      imageDiv.append($("<p>").text("Title: " + response.data[i].title));
+
+      var icon = $("<i class='fas fa-download'></i>");
+      var link = $("<a href='" + response.data[i].images.original.url + "'></a>");
+      link.attr("download", "");
+      var linkDiv = $("<div class=' text-right'></div>");
+      link.append(icon);
+      linkDiv.append(link);
+      imageDiv.append(linkDiv);
+
       $("#images").append(imageDiv);
     }
     // console.log(response.data.length);
