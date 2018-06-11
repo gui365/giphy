@@ -11,14 +11,13 @@
 
 <body>
     <h2>GIF Finder</h2>
-    <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
       
-      <!-- Buttons will dynamically generate here -->
-      <div id="buttons" class="btn-group" role="group" aria-label="First group">
-        
-      </div>
-
-      <!-- Custom keyword search -->
+    <!-- Buttons will dynamically generate here -->
+    <div id="buttons" class="btn-group" role="group" aria-label="First group">
+    </div>
+    <hr>
+    <!-- Custom keyword search -->
+    <div class="d-flex flex-wrap justify-content-center">
       <div class="input-group">
         <input id="user-input" type="text" class="form-control" placeholder="Add new keyword" aria-label="Input group example" aria-describedby="btnGroupAddon2">
         <div class="input-group-append">
@@ -26,15 +25,20 @@
         </div>
       </div>
 
-    </div>
+      <div class="input-group-text">
+        Show:
+        <input name="button-number" class="button-number" type="radio" data-number="10" checked>10
+        <input name="button-number" class="button-number" type="radio" data-number="15">15
+        <input name="button-number" class="button-number" type="radio" data-number="20">20
+      </div>
   
   <!-- Images will dynamically generate into this div, after the AJAX request -->
-  <div id="images" class="d-flex flex-wrap justify-content-center">
-
-  </div>
+  <div id="images" class="d-flex flex-wrap justify-content-center"></div>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="assets/javascript/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

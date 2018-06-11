@@ -1,14 +1,15 @@
 var giphy = {
   apiKey: "6TOJn9Z285U9hfH7TGvprMzuhQhzncPw",
-  topics: ["angry", "happy", "ecstatic", "sad", "mad", "crazy", "emotional"],
+  topics: ["Monica Geller", "Ross Geller", "Phoebe Buffey", "Rachel Green", "Chandler Bing", "friends", "Janice friends"],
   // User's custom keyword
   keyword: "",
+  numberImages: "10",
   
   // AJAX request to Giphy API using the keywords of the array
   request() {
     giphy.keyword = ($(this).attr("data-keyword"));
     $.ajax({
-        url: "https://api.giphy.com/v1/gifs/search?q=" + giphy.keyword + "&api_key=" + giphy.apiKey + "&limit=10",
+        url: "https://api.giphy.com/v1/gifs/search?q=" + giphy.keyword + "&api_key=" + giphy.apiKey + "&limit=" + giphy.numberImages,
         method: "GET"
       }).then(giphy.generateImages);
     // console.log(giphy.keyword);
@@ -71,12 +72,17 @@ var giphy = {
         // console.log(giphy.topics.length);
         // console.log(i);
     };
-  }
+  },
+
+  updateNumberGIF: function(){
+      // giphy.numberImages = $(this).val();
+      giphy.numberImages = $(this).attr("data-number");
+    }
 
 };
 
 giphy.generateButtons();
-
+$(".button-number").on("click", giphy.updateNumberGIF);
 
 // CHECKLIST:
 // ---------

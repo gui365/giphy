@@ -29,6 +29,15 @@ p {
     box-shadow: 0 5px 10px rgb(221, 221, 221);
 }
 
-button {
+button, input, .input-group-text {
     font-size: 0.85rem !important;
+}
+
+.input-group {
+    width: 20%;
+    margin-right: 1rem;
+}
+
+.input-group-text input {
+    margin-left: 0.8rem;
 }
