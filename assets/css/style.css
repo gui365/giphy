@@ -3,18 +3,22 @@
 }
 
 body {
+    background-image: url(../images/back.png);
+    background-repeat: repeat;
+    /* background-size: contain; */
+}
+
+#wrapper {
     margin: 1rem;
 }
 
 h2 {
-    /* font-family: 'Courier New', Courier, monospace; */
-    font-weight: bold;
+    font-family: "Delius", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: black;
-    border-radius: 10px;
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
     margin-bottom: 1rem;
-    color: white;
-    font-size: 1.5rem;
+    color: rgb(109, 180, 238);
+    font-size: 2rem;
 }
 
 #images {
