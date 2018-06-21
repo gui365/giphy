@@ -50,6 +50,7 @@ var giphy = {
 
       var icon = $("<i class='fas fa-download'></i>");
       var link = $("<a href='" + response.data[i].images.original.url + "'></a>");
+      // This is not working... (image doesn't download)
       link.attr("download", "");
       var linkDiv = $("<div class=' text-right'></div>");
       link.append(icon);
