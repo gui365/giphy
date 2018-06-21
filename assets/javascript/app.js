@@ -1,6 +1,6 @@
 var giphy = {
   apiKey: "6TOJn9Z285U9hfH7TGvprMzuhQhzncPw",
-  topics: ["Monica Geller", "Ross Geller", "Phoebe Buffey", "Joey Tribbiani", "Rachel Green", "Chandler Bing", "Janice friends"],
+  topics: ["Monica Geller", "Ross Geller", "Phoebe Buffey", "Joey Tribbiani", "Rachel Green", "Chandler Bing", "Janice Hosenstein"],
   // User's custom keyword
   keyword: "",
   numberImages: "10",
